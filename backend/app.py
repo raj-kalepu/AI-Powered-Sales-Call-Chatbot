@@ -3,6 +3,7 @@ from flask_cors import CORS
 from pymongo import MongoClient
 import os
 from dotenv import load_dotenv
+from routes.chat_routes import chat_bp, init_chat_routes
 
 load_dotenv()
 
