@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from 'frontend/src/styles/Chat.module.css';
+import styles from '../styles/Chat.module.css';
 
 const LoadingIndicator = () => {
   return (
