@@ -28,16 +28,18 @@ try:
     print("Successfully connected to MongoDB!")
 except Exception as e:
     print(f"ERROR: Could not connect to MongoDB. Please check your MONGO_URI and ensure MongoDB is running. Error: {e}")
-    
+   
 
 from routes.chat_routes import chat_bp, init_chat_routes
 from routes.session_routes import session_bp, init_session_routes
 
-if sessions_collection:
+
+if sessions_collection is not None: 
     init_chat_routes(db, sessions_collection)
     init_session_routes(sessions_collection)
 else:
-    print("WARNING: Database connection failed. Chat and session routes will not function correctly.")
+    print("WARNING: Database connection failed. Chat and session routes will not function correctly. Please check MongoDB connection.")
+
 
 app.register_blueprint(chat_bp)
 app.register_blueprint(session_bp)
