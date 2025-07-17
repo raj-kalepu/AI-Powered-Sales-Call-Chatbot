@@ -3,7 +3,6 @@ from flask_cors import CORS
 from pymongo import MongoClient
 import os
 from dotenv import load_dotenv
-from routes.chat_routes import chat_bp, init_chat_routes
 
 load_dotenv()
 
@@ -31,8 +30,8 @@ except Exception as e:
     print(f"ERROR: Could not connect to MongoDB. Please check your MONGO_URI and ensure MongoDB is running. Error: {e}")
     
 
-from backend.routes.chat_routes import chat_bp, init_chat_routes
-from backend.routes.session_routes import session_bp, init_session_routes
+from routes.chat_routes import chat_bp, init_chat_routes
+from routes.session_routes import session_bp, init_session_routes
 
 if sessions_collection:
     init_chat_routes(db, sessions_collection)
