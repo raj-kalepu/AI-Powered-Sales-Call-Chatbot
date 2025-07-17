@@ -12,7 +12,7 @@ export default function Chat() {
 
   const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
-  // Auto-resize textarea
+  
   useEffect(() => {
     if (textareaRef.current) {
       textareaRef.current.style.height = 'auto';
@@ -59,14 +59,14 @@ export default function Chat() {
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault(); // Prevent new line
+      e.preventDefault(); 
       sendMessage();
     }
   };
 
   const startNewChat = () => {
     setMessages([]);
-    setSessionId(null); // Clear session ID to start a new one on next message
+    setSessionId(null); 
     setInputMessage('');
     setIsLoading(false);
   };
