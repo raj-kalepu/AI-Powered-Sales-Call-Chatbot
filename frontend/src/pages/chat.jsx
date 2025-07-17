@@ -1,9 +1,7 @@
-// frontend/src/pages/chat.jsx
-
 import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import ChatWindow from '../components/ChatWindow';
-import styles from '../styles/Chat.module.css'; // Import Chat.module.css
+import styles from '../styles/Chat.module.css';
 
 export default function Chat() {
   const [messages, setMessages] = useState([]);
