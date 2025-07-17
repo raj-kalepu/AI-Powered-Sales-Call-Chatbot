@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import styles from 'frontend/src/styles/Chat.module.css'; 
+import styles from '../styles/Chat.module.css'; 
 
 export default function History() {
   const [sessions, setSessions] = useState([]);
