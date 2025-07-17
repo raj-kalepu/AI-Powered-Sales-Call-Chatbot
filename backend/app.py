@@ -8,7 +8,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
+FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000","https://ai-powered-sales-call-chatbot.vercel.app")
 FLASK_RUN_PORT = int(os.getenv("FLASK_RUN_PORT", 5000))
 
 CORS(app, resources={r"/api/*": {"origins": FRONTEND_URL}})
